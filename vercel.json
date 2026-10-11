@@ -1,0 +1,9 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/assets/(.*)",
+      "destination": "/login/assets/$1"
+    }
+  ]
+}
