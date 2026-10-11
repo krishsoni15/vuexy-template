@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vuexy Master Portal & Explorer | Socker Data</title>
+  <link rel="icon" type="image/x-icon" href="login/assets/img/favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login/assets/vendor/css/core.css">
+  <link rel="stylesheet" href="login/assets/vendor/fonts/iconify-icons.css">
+  <style>
+    :root {
+      --primary: #7367f0;
+      --primary-hover: #5e50ee;
+      --primary-rgb: 115, 103, 240;
+      --bg-body: #f8f7fa;
+      --card-bg: #ffffff;
+      --border-color: #e6e5ec;
+      --text-main: #4b465c;
+      --text-muted: #82808b;
+    }
+    [data-theme="dark"] {
+      --bg-body: #171724;
+      --card-bg: #232233;
+      --border-color: #35344a;
+      --text-main: #cfcde4;
+      --text-muted: #8784a3;
+    }
+    body {
+      font-family: 'Public Sans', -apple-system, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      transition: background-color 0.2s;
+    }
+    .top-header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #7367f0 0%, #8f5fe8 100%);
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      border-radius: 0 0 1.5rem 1.5rem;
+      box-shadow: 0 8px 30px rgba(115, 103, 240, 0.25);
+    }
+    .search-input-wrapper {
+      position: relative;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .search-input {
+      border-radius: 50px;
+      padding: 14px 24px 14px 52px;
+      border: 2px solid transparent;
+      font-size: 1.05rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: all 0.2s;
+      background: #fff;
+      color: #333;
+      width: 100%;
+    }
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 8px 32px rgba(115, 103, 240, 0.3);
+      border-color: #ce9ffc;
+    }
+    .search-icon-pos {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #7367f0;
+      font-size: 1.25rem;
+    }
+    .cat-pill {
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-main);
+      border-radius: 50px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      user-select: none;
+    }
+    .cat-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+    .cat-pill.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 3px 12px rgba(115, 103, 240, 0.35);
+    }
+    .cat-pill .count {
+      background: rgba(0,0,0,0.08);
+      padding: 2px 7px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .cat-pill.active .count {
+      background: rgba(255,255,255,0.25);
+      color: #fff;
+    }
+    .page-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .page-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(75, 70, 92, 0.1);
+      border-color: var(--primary);
+    }
+    .cat-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .cat-badge-Dashboards { background: rgba(115, 103, 240, 0.12); color: #7367f0; }
+    .cat-badge-Authentication { background: rgba(255, 76, 81, 0.12); color: #ff4c51; }
+    .cat-badge-eCommerce { background: rgba(40, 199, 111, 0.12); color: #28c76f; }
+    .cat-badge-Apps { background: rgba(0, 186, 209, 0.12); color: #00bad1; }
+    .cat-badge-Users { background: rgba(255, 159, 67, 0.12); color: #ff9f43; }
+    .cat-badge-Forms { background: rgba(102, 16, 242, 0.12); color: #6610f2; }
+    .cat-badge-Tables { background: rgba(32, 201, 151, 0.12); color: #20c997; }
+    .cat-badge-UIComponents { background: rgba(115, 103, 240, 0.12); color: #7367f0; }
+    .cat-badge-Cards { background: rgba(235, 61, 99, 0.12); color: #eb3d63; }
+    .cat-badge-Charts { background: rgba(255, 171, 29, 0.12); color: #ffab1d; }
+    .cat-badge-Pages { background: rgba(130, 128, 139, 0.12); color: #82808b; }
+    .cat-badge-Wizards { background: rgba(13, 147, 148, 0.12); color: #0d9394; }
+    .cat-badge-Invoice { background: rgba(40, 199, 111, 0.12); color: #28c76f; }
+    .cat-badge-Academy { background: rgba(115, 103, 240, 0.12); color: #7367f0; }
+    .cat-badge-Logistics { background: rgba(255, 159, 67, 0.12); color: #ff9f43; }
+    .cat-badge-RolesPermissions { background: rgba(0, 186, 209, 0.12); color: #00bad1; }
+    
+    .btn-preview {
+      background: rgba(115, 103, 240, 0.1);
+      color: #7367f0;
+      font-weight: 600;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-preview:hover {
+      background: #7367f0;
+      color: #fff;
+    }
+    .btn-open {
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-weight: 500;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn-open:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    
+    /* Live Preview Modal Overlay */
+    .preview-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 17, 26, 0.75);
+      backdrop-filter: blur(6px);
+      z-index: 2000;
+      display: none;
+      flex-direction: column;
+    }
+    .preview-modal-overlay.active {
+      display: flex;
+    }
+    .preview-header {
+      background: #1e1e2d;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .preview-body {
+      flex: 1;
+      background: #2b2c40;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .preview-frame-container {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      transition: max-width 0.3s ease;
+    }
+    .preview-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .device-btn {
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: #ccc;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .device-btn.active, .device-btn:hover {
+      background: #7367f0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-header px-4 py-3">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-3">
+        <span class="p-2 bg-primary rounded-3 text-white d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;">
+          <svg width="24" height="16" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z" fill="#fff"></path>
+            <path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z" fill="#000"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z" fill="#fff"></path>
+          </svg>
+        </span>
+        <div>
+          <h5 class="mb-0 fw-bold">Vuexy Master Portal</h5>
+          <small class="text-muted">Socker Data &bull; 145 Fully Accessible Pages</small>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25 px-3 py-2 rounded-pill d-none d-md-inline-block">
+          &bull; 100% Offline Compatible
+        </span>
+        <a href="login/auth-login-cover.html" class="btn btn-sm btn-primary">
+          🔑 Flagship Login
+        </a>
+        <button id="themeToggle" class="btn btn-sm btn-outline-secondary" title="Toggle Dark/Light Mode">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Search -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h2 class="fw-bold text-white mb-2">All 145 Vuexy Templates in One Place</h2>
+      <p class="lead text-white text-opacity-75 mb-4 small">
+        Search, filter, preview instantly in-browser, or open any page directly with offline styling & scripts.
+      </p>
+      <div class="search-input-wrapper mb-3">
+        <span class="search-icon-pos">🔍</span>
+        <input type="text" id="pageSearch" class="search-input" placeholder="Search any page (e.g. login, dashboard, invoice, ecommerce, datatables)..." autofocus>
+      </div>
+      <div class="text-white-50 small">
+        Press <kbd class="bg-white bg-opacity-25 text-white border-0 px-2 py-1 rounded">/</kbd> to focus search &bull; Click <b>👁 Preview</b> on any card for instant in-page viewing
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Filter Bar -->
+  <div class="container my-4">
+    <div id="categoryFilters" class="d-flex flex-wrap gap-2 justify-content-center">
+      <!-- Filter pills dynamically generated -->
+    </div>
+  </div>
+
+  <!-- Page Results Grid -->
+  <main class="container mb-5 flex-grow-1">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <div id="resultsCount" class="text-muted small fw-semibold">Showing 145 pages</div>
+      <div class="d-flex gap-2">
+        <button id="sortToggle" class="btn btn-sm btn-outline-secondary">A-Z Alphabetical</button>
+      </div>
+    </div>
+    
+    <div id="pagesGrid" class="row g-3">
+      <!-- Cards dynamically generated -->
+    </div>
+  </main>
+
+  <!-- Live In-Page Preview Modal -->
+  <div id="previewModal" class="preview-modal-overlay">
+    <div class="preview-header">
+      <div class="d-flex align-items-center gap-3">
+        <span id="previewPageTitle" class="fw-bold fs-6">Page Title</span>
+        <span id="previewPageFile" class="badge bg-secondary font-monospace small">filename.html</span>
+      </div>
+      
+      <!-- Device viewport buttons -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="device-btn active" data-width="100%">🖥️ Desktop</button>
+        <button class="device-btn" data-width="768px">📱 Tablet</button>
+        <button class="device-btn" data-width="375px">📱 Mobile</button>
+        <a id="previewOpenTab" href="#" target="_blank" class="btn btn-sm btn-primary ms-2">
+          Open Tab ↗
+        </a>
+        <button id="previewClose" class="btn btn-sm btn-outline-light ms-2">
+          ✕ Close
+        </button>
+      </div>
+    </div>
+    <div class="preview-body">
+      <div id="frameContainer" class="preview-frame-container" style="max-width: 100%;">
+        <iframe id="previewIframe" class="preview-frame" src="about:blank"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-white border-top py-3 text-center text-muted small mt-auto">
+    <div class="container">
+      Vuexy Admin Template Master Explorer &bull; Socker Data Project &bull; Extracted from PixInvent mirror
+    </div>
+  </footer>
+
+  <script>
+    const PAGES = [{"filename": "dashboards-crm.html", "title": "Dashboards Crm", "category": "Dashboards", "url": "html/vertical-menu-template/dashboards-crm.html", "size": 291863}, {"filename": "index.html", "title": "Index", "category": "Dashboards", "url": "html/vertical-menu-template/index.html", "size": 270302}, {"filename": "auth-forgot-password-basic.html", "title": "Auth Forgot Password Basic", "category": "Authentication", "url": "html/vertical-menu-template/auth-forgot-password-basic.html", "size": 55852}, {"filename": "auth-forgot-password-cover.html", "title": "Auth Forgot Password Cover", "category": "Authentication", "url": "html/vertical-menu-template/auth-forgot-password-cover.html", "size": 56568}, {"filename": "auth-login-basic.html", "title": "Auth Login Basic", "category": "Authentication", "url": "html/vertical-menu-template/auth-login-basic.html", "size": 58066}, {"filename": "auth-login-cover.html", "title": "Auth Login Cover", "category": "Authentication", "url": "html/vertical-menu-template/auth-login-cover.html", "size": 58576}, {"filename": "auth-register-basic.html", "title": "Auth Register Basic", "category": "Authentication", "url": "html/vertical-menu-template/auth-register-basic.html", "size": 58433}, {"filename": "auth-register-cover.html", "title": "Auth Register Cover", "category": "Authentication", "url": "html/vertical-menu-template/auth-register-cover.html", "size": 59018}, {"filename": "auth-register-multisteps.html", "title": "Auth Register Multisteps", "category": "Authentication", "url": "html/vertical-menu-template/auth-register-multisteps.html", "size": 76791}, {"filename": "auth-reset-password-basic.html", "title": "Auth Reset Password Basic", "category": "Authentication", "url": "html/vertical-menu-template/auth-reset-password-basic.html", "size": 56863}, {"filename": "auth-reset-password-cover.html", "title": "Auth Reset Password Cover", "category": "Authentication", "url": "html/vertical-menu-template/auth-reset-password-cover.html", "size": 57541}, {"filename": "auth-two-steps-basic.html", "title": "Auth Two Steps Basic", "category": "Authentication", "url": "html/vertical-menu-template/auth-two-steps-basic.html", "size": 56822}, {"filename": "auth-two-steps-cover.html", "title": "Auth Two Steps Cover", "category": "Authentication", "url": "html/vertical-menu-template/auth-two-steps-cover.html", "size": 57599}, {"filename": "auth-verify-email-basic.html", "title": "Auth Verify Email Basic", "category": "Authentication", "url": "html/vertical-menu-template/auth-verify-email-basic.html", "size": 54702}, {"filename": "auth-verify-email-cover.html", "title": "Auth Verify Email Cover", "category": "Authentication", "url": "html/vertical-menu-template/auth-verify-email-cover.html", "size": 55501}, {"filename": "app-ecommerce-category-list.html", "title": "App Ecommerce Category List", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-category-list.html", "size": 154786}, {"filename": "app-ecommerce-customer-all.html", "title": "App Ecommerce Customer All", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-customer-all.html", "size": 154356}, {"filename": "app-ecommerce-customer-details-billing.html", "title": "App Ecommerce Customer Details Billing", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-customer-details-billing.html", "size": 181196}, {"filename": "app-ecommerce-customer-details-notifications.html", "title": "App Ecommerce Customer Details Notifications", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-customer-details-notifications.html", "size": 148325}, {"filename": "app-ecommerce-customer-details-overview.html", "title": "App Ecommerce Customer Details Overview", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-customer-details-overview.html", "size": 158896}, {"filename": "app-ecommerce-customer-details-security.html", "title": "App Ecommerce Customer Details Security", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-customer-details-security.html", "size": 151370}, {"filename": "app-ecommerce-dashboard.html", "title": "App Ecommerce Dashboard", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-dashboard.html", "size": 314586}, {"filename": "app-ecommerce-manage-reviews.html", "title": "App Ecommerce Manage Reviews", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-manage-reviews.html", "size": 229617}, {"filename": "app-ecommerce-order-details.html", "title": "App Ecommerce Order Details", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-order-details.html", "size": 160218}, {"filename": "app-ecommerce-order-list.html", "title": "App Ecommerce Order List", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-order-list.html", "size": 158656}, {"filename": "app-ecommerce-product-add.html", "title": "App Ecommerce Product Add", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-product-add.html", "size": 164076}, {"filename": "app-ecommerce-product-list.html", "title": "App Ecommerce Product List", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-product-list.html", "size": 157605}, {"filename": "app-ecommerce-referral.html", "title": "App Ecommerce Referral", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-referral.html", "size": 158664}, {"filename": "app-ecommerce-settings-checkout.html", "title": "App Ecommerce Settings Checkout", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-settings-checkout.html", "size": 134147}, {"filename": "app-ecommerce-settings-detail.html", "title": "App Ecommerce Settings Detail", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-settings-detail.html", "size": 144841}, {"filename": "app-ecommerce-settings-locations.html", "title": "App Ecommerce Settings Locations", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-settings-locations.html", "size": 134911}, {"filename": "app-ecommerce-settings-notifications.html", "title": "App Ecommerce Settings Notifications", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-settings-notifications.html", "size": 138884}, {"filename": "app-ecommerce-settings-payments.html", "title": "App Ecommerce Settings Payments", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-settings-payments.html", "size": 145352}, {"filename": "app-ecommerce-settings-shipping.html", "title": "App Ecommerce Settings Shipping", "category": "eCommerce", "url": "html/vertical-menu-template/app-ecommerce-settings-shipping.html", "size": 138778}, {"filename": "app-calendar.html", "title": "App Calendar", "category": "Apps", "url": "html/vertical-menu-template/app-calendar.html", "size": 183724}, {"filename": "app-chat.html", "title": "App Chat", "category": "Apps", "url": "html/vertical-menu-template/app-chat.html", "size": 159632}, {"filename": "app-email.html", "title": "App Email", "category": "Apps", "url": "html/vertical-menu-template/app-email.html", "size": 189826}, {"filename": "app-kanban.html", "title": "App Kanban", "category": "Apps", "url": "html/vertical-menu-template/app-kanban.html", "size": 164079}, {"filename": "app-user-list.html", "title": "App User List", "category": "Users", "url": "html/vertical-menu-template/app-user-list.html", "size": 164019}, {"filename": "app-user-view-account.html", "title": "App User View Account", "category": "Users", "url": "html/vertical-menu-template/app-user-view-account.html", "size": 204637}, {"filename": "app-user-view-billing.html", "title": "App User View Billing", "category": "Users", "url": "html/vertical-menu-template/app-user-view-billing.html", "size": 170044}, {"filename": "app-user-view-connections.html", "title": "App User View Connections", "category": "Users", "url": "html/vertical-menu-template/app-user-view-connections.html", "size": 152502}, {"filename": "app-user-view-notifications.html", "title": "App User View Notifications", "category": "Users", "url": "html/vertical-menu-template/app-user-view-notifications.html", "size": 149037}, {"filename": "app-user-view-security.html", "title": "App User View Security", "category": "Users", "url": "html/vertical-menu-template/app-user-view-security.html", "size": 152228}, {"filename": "app-access-permission.html", "title": "App Access Permission", "category": "Roles & Permissions", "url": "html/vertical-menu-template/app-access-permission.html", "size": 147800}, {"filename": "app-access-roles.html", "title": "App Access Roles", "category": "Roles & Permissions", "url": "html/vertical-menu-template/app-access-roles.html", "size": 178964}, {"filename": "app-invoice-add.html", "title": "App Invoice Add", "category": "Invoice", "url": "html/vertical-menu-template/app-invoice-add.html", "size": 142908}, {"filename": "app-invoice-edit.html", "title": "App Invoice Edit", "category": "Invoice", "url": "html/vertical-menu-template/app-invoice-edit.html", "size": 160942}, {"filename": "app-invoice-list.html", "title": "App Invoice List", "category": "Invoice", "url": "html/vertical-menu-template/app-invoice-list.html", "size": 167186}, {"filename": "app-invoice-preview.html", "title": "App Invoice Preview", "category": "Invoice", "url": "html/vertical-menu-template/app-invoice-preview.html", "size": 144247}, {"filename": "app-invoice-print.html", "title": "App Invoice Print", "category": "Invoice", "url": "html/vertical-menu-template/app-invoice-print.html", "size": 57671}, {"filename": "app-academy-course.html", "title": "App Academy Course", "category": "Academy", "url": "html/vertical-menu-template/app-academy-course.html", "size": 166902}, {"filename": "app-academy-course-details.html", "title": "App Academy Course Details", "category": "Academy", "url": "html/vertical-menu-template/app-academy-course-details.html", "size": 153009}, {"filename": "app-academy-dashboard.html", "title": "App Academy Dashboard", "category": "Academy", "url": "html/vertical-menu-template/app-academy-dashboard.html", "size": 251284}, {"filename": "app-logistics-dashboard.html", "title": "App Logistics Dashboard", "category": "Logistics", "url": "html/vertical-menu-template/app-logistics-dashboard.html", "size": 247313}, {"filename": "app-logistics-fleet.html", "title": "App Logistics Fleet", "category": "Logistics", "url": "html/vertical-menu-template/app-logistics-fleet.html", "size": 144740}, {"filename": "cards-actions.html", "title": "Cards Actions", "category": "Cards", "url": "html/vertical-menu-template/cards-actions.html", "size": 142155}, {"filename": "cards-advance.html", "title": "Cards Advance", "category": "Cards", "url": "html/vertical-menu-template/cards-advance.html", "size": 356482}, {"filename": "cards-analytics.html", "title": "Cards Analytics", "category": "Cards", "url": "html/vertical-menu-template/cards-analytics.html", "size": 455384}, {"filename": "cards-basic.html", "title": "Cards Basic", "category": "Cards", "url": "html/vertical-menu-template/cards-basic.html", "size": 156139}, {"filename": "cards-statistics.html", "title": "Cards Statistics", "category": "Cards", "url": "html/vertical-menu-template/cards-statistics.html", "size": 352862}, {"filename": "charts-apex.html", "title": "Charts Apex", "category": "Charts", "url": "html/vertical-menu-template/charts-apex.html", "size": 488601}, {"filename": "charts-chartjs.html", "title": "Charts Chartjs", "category": "Charts", "url": "html/vertical-menu-template/charts-chartjs.html", "size": 139676}, {"filename": "form-layouts-horizontal.html", "title": "Form Layouts Horizontal", "category": "Forms", "url": "html/vertical-menu-template/form-layouts-horizontal.html", "size": 198124}, {"filename": "form-layouts-sticky.html", "title": "Form Layouts Sticky", "category": "Forms", "url": "html/vertical-menu-template/form-layouts-sticky.html", "size": 143068}, {"filename": "form-layouts-vertical.html", "title": "Form Layouts Vertical", "category": "Forms", "url": "html/vertical-menu-template/form-layouts-vertical.html", "size": 178606}, {"filename": "form-validation.html", "title": "Form Validation", "category": "Forms", "url": "html/vertical-menu-template/form-validation.html", "size": 168543}, {"filename": "form-wizard-icons.html", "title": "Form Wizard Icons", "category": "Forms", "url": "html/vertical-menu-template/form-wizard-icons.html", "size": 179065}, {"filename": "form-wizard-numbered.html", "title": "Form Wizard Numbered", "category": "Forms", "url": "html/vertical-menu-template/form-wizard-numbered.html", "size": 182425}, {"filename": "forms-basic-inputs.html", "title": "Forms Basic Inputs", "category": "Forms", "url": "html/vertical-menu-template/forms-basic-inputs.html", "size": 151880}, {"filename": "forms-custom-options.html", "title": "Forms Custom Options", "category": "Forms", "url": "html/vertical-menu-template/forms-custom-options.html", "size": 159440}, {"filename": "forms-editors.html", "title": "Forms Editors", "category": "Forms", "url": "html/vertical-menu-template/forms-editors.html", "size": 203881}, {"filename": "forms-extras.html", "title": "Forms Extras", "category": "Forms", "url": "html/vertical-menu-template/forms-extras.html", "size": 133967}, {"filename": "forms-file-upload.html", "title": "Forms File Upload", "category": "Forms", "url": "html/vertical-menu-template/forms-file-upload.html", "size": 127827}, {"filename": "forms-input-groups.html", "title": "Forms Input Groups", "category": "Forms", "url": "html/vertical-menu-template/forms-input-groups.html", "size": 146329}, {"filename": "forms-pickers.html", "title": "Forms Pickers", "category": "Forms", "url": "html/vertical-menu-template/forms-pickers.html", "size": 190893}, {"filename": "forms-selects.html", "title": "Forms Selects", "category": "Forms", "url": "html/vertical-menu-template/forms-selects.html", "size": 184731}, {"filename": "forms-sliders.html", "title": "Forms Sliders", "category": "Forms", "url": "html/vertical-menu-template/forms-sliders.html", "size": 171254}, {"filename": "forms-switches.html", "title": "Forms Switches", "category": "Forms", "url": "html/vertical-menu-template/forms-switches.html", "size": 141689}, {"filename": "wizard-ex-checkout.html", "title": "Wizard Ex Checkout", "category": "Wizards", "url": "html/vertical-menu-template/wizard-ex-checkout.html", "size": 172982}, {"filename": "wizard-ex-create-deal.html", "title": "Wizard Ex Create Deal", "category": "Wizards", "url": "html/vertical-menu-template/wizard-ex-create-deal.html", "size": 164114}, {"filename": "wizard-ex-property-listing.html", "title": "Wizard Ex Property Listing", "category": "Wizards", "url": "html/vertical-menu-template/wizard-ex-property-listing.html", "size": 175940}, {"filename": "tables-basic.html", "title": "Tables Basic", "category": "Tables", "url": "html/vertical-menu-template/tables-basic.html", "size": 264600}, {"filename": "tables-datatables-advanced.html", "title": "Tables Datatables Advanced", "category": "Tables", "url": "html/vertical-menu-template/tables-datatables-advanced.html", "size": 187781}, {"filename": "tables-datatables-basic.html", "title": "Tables Datatables Basic", "category": "Tables", "url": "html/vertical-menu-template/tables-datatables-basic.html", "size": 202867}, {"filename": "tables-datatables-extensions.html", "title": "Tables Datatables Extensions", "category": "Tables", "url": "html/vertical-menu-template/tables-datatables-extensions.html", "size": 290141}, {"filename": "extended-ui-avatar.html", "title": "Extended Ui Avatar", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-avatar.html", "size": 136784}, {"filename": "extended-ui-blockui.html", "title": "Extended Ui Blockui", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-blockui.html", "size": 134099}, {"filename": "extended-ui-drag-and-drop.html", "title": "Extended Ui Drag And Drop", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-drag-and-drop.html", "size": 143572}, {"filename": "extended-ui-media-player.html", "title": "Extended Ui Media Player", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-media-player.html", "size": 143319}, {"filename": "extended-ui-misc.html", "title": "Extended Ui Misc", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-misc.html", "size": 133069}, {"filename": "extended-ui-perfect-scrollbar.html", "title": "Extended Ui Perfect Scrollbar", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-perfect-scrollbar.html", "size": 132640}, {"filename": "extended-ui-star-ratings.html", "title": "Extended Ui Star Ratings", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-star-ratings.html", "size": 151717}, {"filename": "extended-ui-sweetalert2.html", "title": "Extended Ui Sweetalert2", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-sweetalert2.html", "size": 131914}, {"filename": "extended-ui-text-divider.html", "title": "Extended Ui Text Divider", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-text-divider.html", "size": 133026}, {"filename": "extended-ui-timeline-basic.html", "title": "Extended Ui Timeline Basic", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-timeline-basic.html", "size": 135056}, {"filename": "extended-ui-timeline-fullscreen.html", "title": "Extended Ui Timeline Fullscreen", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-timeline-fullscreen.html", "size": 147174}, {"filename": "extended-ui-tour.html", "title": "Extended Ui Tour", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-tour.html", "size": 126583}, {"filename": "extended-ui-treeview.html", "title": "Extended Ui Treeview", "category": "UI Components", "url": "html/vertical-menu-template/extended-ui-treeview.html", "size": 157860}, {"filename": "ui-accordion.html", "title": "Ui Accordion", "category": "UI Components", "url": "html/vertical-menu-template/ui-accordion.html", "size": 141793}, {"filename": "ui-alerts.html", "title": "Ui Alerts", "category": "UI Components", "url": "html/vertical-menu-template/ui-alerts.html", "size": 137050}, {"filename": "ui-badges.html", "title": "Ui Badges", "category": "UI Components", "url": "html/vertical-menu-template/ui-badges.html", "size": 151275}, {"filename": "ui-buttons.html", "title": "Ui Buttons", "category": "UI Components", "url": "html/vertical-menu-template/ui-buttons.html", "size": 155596}, {"filename": "ui-carousel.html", "title": "Ui Carousel", "category": "UI Components", "url": "html/vertical-menu-template/ui-carousel.html", "size": 154570}, {"filename": "ui-collapse.html", "title": "Ui Collapse", "category": "UI Components", "url": "html/vertical-menu-template/ui-collapse.html", "size": 131659}, {"filename": "ui-dropdowns.html", "title": "Ui Dropdowns", "category": "UI Components", "url": "html/vertical-menu-template/ui-dropdowns.html", "size": 172414}, {"filename": "ui-footer.html", "title": "Ui Footer", "category": "UI Components", "url": "html/vertical-menu-template/ui-footer.html", "size": 141106}, {"filename": "ui-list-groups.html", "title": "Ui List Groups", "category": "UI Components", "url": "html/vertical-menu-template/ui-list-groups.html", "size": 157540}, {"filename": "ui-modals.html", "title": "Ui Modals", "category": "UI Components", "url": "html/vertical-menu-template/ui-modals.html", "size": 190836}, {"filename": "ui-navbar.html", "title": "Ui Navbar", "category": "UI Components", "url": "html/vertical-menu-template/ui-navbar.html", "size": 157815}, {"filename": "ui-offcanvas.html", "title": "Ui Offcanvas", "category": "UI Components", "url": "html/vertical-menu-template/ui-offcanvas.html", "size": 140965}, {"filename": "ui-pagination-breadcrumbs.html", "title": "Ui Pagination Breadcrumbs", "category": "UI Components", "url": "html/vertical-menu-template/ui-pagination-breadcrumbs.html", "size": 168470}, {"filename": "ui-progress.html", "title": "Ui Progress", "category": "UI Components", "url": "html/vertical-menu-template/ui-progress.html", "size": 135881}, {"filename": "ui-spinners.html", "title": "Ui Spinners", "category": "UI Components", "url": "html/vertical-menu-template/ui-spinners.html", "size": 137025}, {"filename": "ui-tabs-pills.html", "title": "Ui Tabs Pills", "category": "UI Components", "url": "html/vertical-menu-template/ui-tabs-pills.html", "size": 148360}, {"filename": "ui-toasts.html", "title": "Ui Toasts", "category": "UI Components", "url": "html/vertical-menu-template/ui-toasts.html", "size": 148970}, {"filename": "ui-tooltips-popovers.html", "title": "Ui Tooltips Popovers", "category": "UI Components", "url": "html/vertical-menu-template/ui-tooltips-popovers.html", "size": 135940}, {"filename": "ui-typography.html", "title": "Ui Typography", "category": "UI Components", "url": "html/vertical-menu-template/ui-typography.html", "size": 139854}, {"filename": "icons-font-awesome.html", "title": "Icons Font Awesome", "category": "Pages", "url": "html/vertical-menu-template/icons-font-awesome.html", "size": 132833}, {"filename": "icons-tabler.html", "title": "Icons Tabler", "category": "Pages", "url": "html/vertical-menu-template/icons-tabler.html", "size": 133052}, {"filename": "layouts-blank.html", "title": "Layouts Blank", "category": "Pages", "url": "html/vertical-menu-template/layouts-blank.html", "size": 52603}, {"filename": "layouts-collapsed-menu.html", "title": "Layouts Collapsed Menu", "category": "Pages", "url": "html/vertical-menu-template/layouts-collapsed-menu.html", "size": 126755}, {"filename": "layouts-container.html", "title": "Layouts Container", "category": "Pages", "url": "html/vertical-menu-template/layouts-container.html", "size": 126605}, {"filename": "layouts-content-navbar.html", "title": "Layouts Content Navbar", "category": "Pages", "url": "html/vertical-menu-template/layouts-content-navbar.html", "size": 126590}, {"filename": "layouts-content-navbar-with-sidebar.html", "title": "Layouts Content Navbar With Sidebar", "category": "Pages", "url": "html/vertical-menu-template/layouts-content-navbar-with-sidebar.html", "size": 126986}, {"filename": "layouts-fluid.html", "title": "Layouts Fluid", "category": "Pages", "url": "html/vertical-menu-template/layouts-fluid.html", "size": 126581}, {"filename": "layouts-without-menu.html", "title": "Layouts Without Menu", "category": "Pages", "url": "html/vertical-menu-template/layouts-without-menu.html", "size": 80277}, {"filename": "layouts-without-navbar.html", "title": "Layouts Without Navbar", "category": "Pages", "url": "html/vertical-menu-template/layouts-without-navbar.html", "size": 101235}, {"filename": "maps-leaflet.html", "title": "Maps Leaflet", "category": "Pages", "url": "html/vertical-menu-template/maps-leaflet.html", "size": 204414}, {"filename": "modal-examples.html", "title": "Modal Examples", "category": "Pages", "url": "html/vertical-menu-template/modal-examples.html", "size": 226338}, {"filename": "pages-account-settings-account.html", "title": "Pages Account Settings Account", "category": "Pages", "url": "html/vertical-menu-template/pages-account-settings-account.html", "size": 141369}, {"filename": "pages-account-settings-billing.html", "title": "Pages Account Settings Billing", "category": "Pages", "url": "html/vertical-menu-template/pages-account-settings-billing.html", "size": 190517}, {"filename": "pages-account-settings-connections.html", "title": "Pages Account Settings Connections", "category": "Pages", "url": "html/vertical-menu-template/pages-account-settings-connections.html", "size": 135977}, {"filename": "pages-account-settings-notifications.html", "title": "Pages Account Settings Notifications", "category": "Pages", "url": "html/vertical-menu-template/pages-account-settings-notifications.html", "size": 132851}, {"filename": "pages-account-settings-security.html", "title": "Pages Account Settings Security", "category": "Pages", "url": "html/vertical-menu-template/pages-account-settings-security.html", "size": 142435}, {"filename": "pages-faq.html", "title": "Pages Faq", "category": "Pages", "url": "html/vertical-menu-template/pages-faq.html", "size": 146768}, {"filename": "pages-misc-comingsoon.html", "title": "Pages Misc Comingsoon", "category": "Pages", "url": "html/vertical-menu-template/pages-misc-comingsoon.html", "size": 53833}, {"filename": "pages-misc-error.html", "title": "Pages Misc Error", "category": "Pages", "url": "html/vertical-menu-template/pages-misc-error.html", "size": 53588}, {"filename": "pages-misc-not-authorized.html", "title": "Pages Misc Not Authorized", "category": "Pages", "url": "html/vertical-menu-template/pages-misc-not-authorized.html", "size": 53655}, {"filename": "pages-misc-under-maintenance.html", "title": "Pages Misc Under Maintenance", "category": "Pages", "url": "html/vertical-menu-template/pages-misc-under-maintenance.html", "size": 53635}, {"filename": "pages-pricing.html", "title": "Pages Pricing", "category": "Pages", "url": "html/vertical-menu-template/pages-pricing.html", "size": 132763}, {"filename": "pages-profile-connections.html", "title": "Pages Profile Connections", "category": "Pages", "url": "html/vertical-menu-template/pages-profile-connections.html", "size": 143532}, {"filename": "pages-profile-projects.html", "title": "Pages Profile Projects", "category": "Pages", "url": "html/vertical-menu-template/pages-profile-projects.html", "size": 157794}, {"filename": "pages-profile-teams.html", "title": "Pages Profile Teams", "category": "Pages", "url": "html/vertical-menu-template/pages-profile-teams.html", "size": 162493}, {"filename": "pages-profile-user.html", "title": "Pages Profile User", "category": "Pages", "url": "html/vertical-menu-template/pages-profile-user.html", "size": 174288}];
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let sortMode = 'priority';
+
+    const grid = document.getElementById('pagesGrid');
+    const searchInput = document.getElementById('pageSearch');
+    const catContainer = document.getElementById('categoryFilters');
+    const resultsCount = document.getElementById('resultsCount');
+    const modal = document.getElementById('previewModal');
+    const iframe = document.getElementById('previewIframe');
+    const previewTitle = document.getElementById('previewPageTitle');
+    const previewFile = document.getElementById('previewPageFile');
+    const previewTabBtn = document.getElementById('previewOpenTab');
+    const frameContainer = document.getElementById('frameContainer');
+
+    const categories = ['all'];
+    const catCounts = { 'all': PAGES.length };
+    PAGES.forEach(p => {
+      catCounts[p.category] = (catCounts[p.category] || 0) + 1;
+      if (!categories.includes(p.category)) categories.push(p.category);
+    });
+
+    function renderCategoryPills() {
+      catContainer.innerHTML = categories.map(cat => `
+        <button class="cat-pill ${cat === currentCategory ? 'active' : ''}" data-cat="${cat}">
+          ${cat === 'all' ? '🌟 All Pages' : cat}
+          <span class="count">${catCounts[cat]}</span>
+        </button>
+      `).join('');
+
+      catContainer.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentCategory = btn.getAttribute('data-cat');
+          renderCategoryPills();
+          renderGrid();
+        });
+      });
+    }
+
+    function renderGrid() {
+      let filtered = PAGES.filter(p => {
+        const matchesCat = (currentCategory === 'all' || p.category === currentCategory);
+        const q = searchQuery.toLowerCase().trim();
+        const matchesQuery = !q || 
+          p.title.toLowerCase().includes(q) || 
+          p.filename.toLowerCase().includes(q) || 
+          p.category.toLowerCase().includes(q);
+        return matchesCat && matchesQuery;
+      });
+
+      if (sortMode === 'alpha') {
+        filtered.sort((a,b) => a.title.localeCompare(b.title));
+      }
+
+      resultsCount.textContent = `Showing ${filtered.length} of ${PAGES.length} pages`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <div class="fs-1 mb-2">🔍</div>
+            <h5 class="text-muted">No pages found matching "${searchQuery}"</h5>
+            <button class="btn btn-sm btn-outline-primary mt-2" onclick="resetSearch()">Clear search</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(item => `
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="page-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <span class="cat-badge cat-badge-${item.category.replace(/[^a-zA-Z0-9]/g, '')}">${item.category}</span>
+              <small class="text-muted font-monospace" style="font-size: 0.7rem;">${(item.size / 1024).toFixed(0)} KB</small>
+            </div>
+            
+            <h6 class="fw-bold mb-1 text-truncate" title="${item.title}">${item.title}</h6>
+            <div class="text-muted small font-monospace text-truncate mb-3" style="font-size: 0.75rem;" title="${item.filename}">
+              ${item.filename}
+            </div>
+
+            <div class="mt-auto d-flex gap-2 pt-2 border-top">
+              <button class="btn-preview flex-grow-1 justify-content-center" onclick="openPreview('${item.url}', '${item.title.replace(/'/g, "\\\'")}', '${item.filename}')">
+                👁 Preview
+              </button>
+              <a href="${item.url}" target="_blank" class="btn-open" title="Open full page in new tab">
+                ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openPreview(url, title, filename) {
+      previewTitle.textContent = title;
+      previewFile.textContent = filename;
+      previewTabBtn.href = url;
+      iframe.src = url;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreview() {
+      modal.classList.remove('active');
+      iframe.src = 'about:blank';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('previewClose').addEventListener('click', closePreview);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.classList.contains('preview-body')) {
+        closePreview();
+      }
+    });
+
+    document.querySelectorAll('.device-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        frameContainer.style.maxWidth = btn.getAttribute('data-width');
+      });
+    });
+
+    function resetSearch() {
+      searchInput.value = '';
+      searchQuery = '';
+      currentCategory = 'all';
+      renderCategoryPills();
+      renderGrid();
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderGrid();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      } else if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closePreview();
+      }
+    });
+
+    document.getElementById('sortToggle').addEventListener('click', function() {
+      sortMode = sortMode === 'priority' ? 'alpha' : 'priority';
+      this.textContent = sortMode === 'alpha' ? 'Categorized' : 'A-Z Alphabetical';
+      renderGrid();
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    let isDark = localStorage.getItem('vuexy-hub-theme') === 'dark';
+    function applyTheme() {
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+    }
+    applyTheme();
+    themeToggle.addEventListener('click', () => {
+      isDark = !isDark;
+      localStorage.setItem('vuexy-hub-theme', isDark ? 'dark' : 'light');
+      applyTheme();
+    });
+
+    renderCategoryPills();
+    renderGrid();
+  </script>
+</body>
+</html>

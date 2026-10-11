@@ -1,0 +1,1017 @@
+[
+  {
+    "filename": "app-academy-course-details.html",
+    "title": "App Academy Course Details",
+    "category": "Academy",
+    "url": "html/vertical-menu-template/app-academy-course-details.html",
+    "size": 153009
+  },
+  {
+    "filename": "app-academy-course.html",
+    "title": "App Academy Course",
+    "category": "Academy",
+    "url": "html/vertical-menu-template/app-academy-course.html",
+    "size": 166902
+  },
+  {
+    "filename": "app-academy-dashboard.html",
+    "title": "App Academy Dashboard",
+    "category": "Academy",
+    "url": "html/vertical-menu-template/app-academy-dashboard.html",
+    "size": 251284
+  },
+  {
+    "filename": "app-access-permission.html",
+    "title": "App Access Permission",
+    "category": "Roles & Permissions",
+    "url": "html/vertical-menu-template/app-access-permission.html",
+    "size": 147800
+  },
+  {
+    "filename": "app-access-roles.html",
+    "title": "App Access Roles",
+    "category": "Roles & Permissions",
+    "url": "html/vertical-menu-template/app-access-roles.html",
+    "size": 178964
+  },
+  {
+    "filename": "app-calendar.html",
+    "title": "App Calendar",
+    "category": "Apps",
+    "url": "html/vertical-menu-template/app-calendar.html",
+    "size": 183724
+  },
+  {
+    "filename": "app-chat.html",
+    "title": "App Chat",
+    "category": "Apps",
+    "url": "html/vertical-menu-template/app-chat.html",
+    "size": 159632
+  },
+  {
+    "filename": "app-ecommerce-category-list.html",
+    "title": "App Ecommerce Category List",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-category-list.html",
+    "size": 154786
+  },
+  {
+    "filename": "app-ecommerce-customer-all.html",
+    "title": "App Ecommerce Customer All",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-customer-all.html",
+    "size": 154356
+  },
+  {
+    "filename": "app-ecommerce-customer-details-billing.html",
+    "title": "App Ecommerce Customer Details Billing",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-customer-details-billing.html",
+    "size": 181196
+  },
+  {
+    "filename": "app-ecommerce-customer-details-notifications.html",
+    "title": "App Ecommerce Customer Details Notifications",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-customer-details-notifications.html",
+    "size": 148325
+  },
+  {
+    "filename": "app-ecommerce-customer-details-overview.html",
+    "title": "App Ecommerce Customer Details Overview",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-customer-details-overview.html",
+    "size": 158896
+  },
+  {
+    "filename": "app-ecommerce-customer-details-security.html",
+    "title": "App Ecommerce Customer Details Security",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-customer-details-security.html",
+    "size": 151370
+  },
+  {
+    "filename": "app-ecommerce-dashboard.html",
+    "title": "App Ecommerce Dashboard",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-dashboard.html",
+    "size": 314586
+  },
+  {
+    "filename": "app-ecommerce-manage-reviews.html",
+    "title": "App Ecommerce Manage Reviews",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-manage-reviews.html",
+    "size": 229617
+  },
+  {
+    "filename": "app-ecommerce-order-details.html",
+    "title": "App Ecommerce Order Details",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-order-details.html",
+    "size": 160218
+  },
+  {
+    "filename": "app-ecommerce-order-list.html",
+    "title": "App Ecommerce Order List",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-order-list.html",
+    "size": 158656
+  },
+  {
+    "filename": "app-ecommerce-product-add.html",
+    "title": "App Ecommerce Product Add",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-product-add.html",
+    "size": 164076
+  },
+  {
+    "filename": "app-ecommerce-product-list.html",
+    "title": "App Ecommerce Product List",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-product-list.html",
+    "size": 157605
+  },
+  {
+    "filename": "app-ecommerce-referral.html",
+    "title": "App Ecommerce Referral",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-referral.html",
+    "size": 158664
+  },
+  {
+    "filename": "app-ecommerce-settings-checkout.html",
+    "title": "App Ecommerce Settings Checkout",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-settings-checkout.html",
+    "size": 134147
+  },
+  {
+    "filename": "app-ecommerce-settings-detail.html",
+    "title": "App Ecommerce Settings Detail",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-settings-detail.html",
+    "size": 144841
+  },
+  {
+    "filename": "app-ecommerce-settings-locations.html",
+    "title": "App Ecommerce Settings Locations",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-settings-locations.html",
+    "size": 134911
+  },
+  {
+    "filename": "app-ecommerce-settings-notifications.html",
+    "title": "App Ecommerce Settings Notifications",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-settings-notifications.html",
+    "size": 138884
+  },
+  {
+    "filename": "app-ecommerce-settings-payments.html",
+    "title": "App Ecommerce Settings Payments",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-settings-payments.html",
+    "size": 145352
+  },
+  {
+    "filename": "app-ecommerce-settings-shipping.html",
+    "title": "App Ecommerce Settings Shipping",
+    "category": "eCommerce",
+    "url": "html/vertical-menu-template/app-ecommerce-settings-shipping.html",
+    "size": 138778
+  },
+  {
+    "filename": "app-email.html",
+    "title": "App Email",
+    "category": "Apps",
+    "url": "html/vertical-menu-template/app-email.html",
+    "size": 189826
+  },
+  {
+    "filename": "app-invoice-add.html",
+    "title": "App Invoice Add",
+    "category": "Invoice",
+    "url": "html/vertical-menu-template/app-invoice-add.html",
+    "size": 142908
+  },
+  {
+    "filename": "app-invoice-edit.html",
+    "title": "App Invoice Edit",
+    "category": "Invoice",
+    "url": "html/vertical-menu-template/app-invoice-edit.html",
+    "size": 160942
+  },
+  {
+    "filename": "app-invoice-list.html",
+    "title": "App Invoice List",
+    "category": "Invoice",
+    "url": "html/vertical-menu-template/app-invoice-list.html",
+    "size": 167186
+  },
+  {
+    "filename": "app-invoice-preview.html",
+    "title": "App Invoice Preview",
+    "category": "Invoice",
+    "url": "html/vertical-menu-template/app-invoice-preview.html",
+    "size": 144247
+  },
+  {
+    "filename": "app-invoice-print.html",
+    "title": "App Invoice Print",
+    "category": "Invoice",
+    "url": "html/vertical-menu-template/app-invoice-print.html",
+    "size": 57671
+  },
+  {
+    "filename": "app-kanban.html",
+    "title": "App Kanban",
+    "category": "Apps",
+    "url": "html/vertical-menu-template/app-kanban.html",
+    "size": 164079
+  },
+  {
+    "filename": "app-logistics-dashboard.html",
+    "title": "App Logistics Dashboard",
+    "category": "Logistics",
+    "url": "html/vertical-menu-template/app-logistics-dashboard.html",
+    "size": 247313
+  },
+  {
+    "filename": "app-logistics-fleet.html",
+    "title": "App Logistics Fleet",
+    "category": "Logistics",
+    "url": "html/vertical-menu-template/app-logistics-fleet.html",
+    "size": 144740
+  },
+  {
+    "filename": "app-user-list.html",
+    "title": "App User List",
+    "category": "Users",
+    "url": "html/vertical-menu-template/app-user-list.html",
+    "size": 164019
+  },
+  {
+    "filename": "app-user-view-account.html",
+    "title": "App User View Account",
+    "category": "Users",
+    "url": "html/vertical-menu-template/app-user-view-account.html",
+    "size": 204637
+  },
+  {
+    "filename": "app-user-view-billing.html",
+    "title": "App User View Billing",
+    "category": "Users",
+    "url": "html/vertical-menu-template/app-user-view-billing.html",
+    "size": 170044
+  },
+  {
+    "filename": "app-user-view-connections.html",
+    "title": "App User View Connections",
+    "category": "Users",
+    "url": "html/vertical-menu-template/app-user-view-connections.html",
+    "size": 152502
+  },
+  {
+    "filename": "app-user-view-notifications.html",
+    "title": "App User View Notifications",
+    "category": "Users",
+    "url": "html/vertical-menu-template/app-user-view-notifications.html",
+    "size": 149037
+  },
+  {
+    "filename": "app-user-view-security.html",
+    "title": "App User View Security",
+    "category": "Users",
+    "url": "html/vertical-menu-template/app-user-view-security.html",
+    "size": 152228
+  },
+  {
+    "filename": "auth-forgot-password-basic.html",
+    "title": "Auth Forgot Password Basic",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-forgot-password-basic.html",
+    "size": 55852
+  },
+  {
+    "filename": "auth-forgot-password-cover.html",
+    "title": "Auth Forgot Password Cover",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-forgot-password-cover.html",
+    "size": 56568
+  },
+  {
+    "filename": "auth-login-basic.html",
+    "title": "Auth Login Basic",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-login-basic.html",
+    "size": 58066
+  },
+  {
+    "filename": "auth-login-cover.html",
+    "title": "Auth Login Cover",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-login-cover.html",
+    "size": 58576
+  },
+  {
+    "filename": "auth-register-basic.html",
+    "title": "Auth Register Basic",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-register-basic.html",
+    "size": 58433
+  },
+  {
+    "filename": "auth-register-cover.html",
+    "title": "Auth Register Cover",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-register-cover.html",
+    "size": 59018
+  },
+  {
+    "filename": "auth-register-multisteps.html",
+    "title": "Auth Register Multisteps",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-register-multisteps.html",
+    "size": 76791
+  },
+  {
+    "filename": "auth-reset-password-basic.html",
+    "title": "Auth Reset Password Basic",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-reset-password-basic.html",
+    "size": 56863
+  },
+  {
+    "filename": "auth-reset-password-cover.html",
+    "title": "Auth Reset Password Cover",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-reset-password-cover.html",
+    "size": 57541
+  },
+  {
+    "filename": "auth-two-steps-basic.html",
+    "title": "Auth Two Steps Basic",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-two-steps-basic.html",
+    "size": 56822
+  },
+  {
+    "filename": "auth-two-steps-cover.html",
+    "title": "Auth Two Steps Cover",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-two-steps-cover.html",
+    "size": 57599
+  },
+  {
+    "filename": "auth-verify-email-basic.html",
+    "title": "Auth Verify Email Basic",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-verify-email-basic.html",
+    "size": 54702
+  },
+  {
+    "filename": "auth-verify-email-cover.html",
+    "title": "Auth Verify Email Cover",
+    "category": "Authentication",
+    "url": "html/vertical-menu-template/auth-verify-email-cover.html",
+    "size": 55501
+  },
+  {
+    "filename": "cards-actions.html",
+    "title": "Cards Actions",
+    "category": "Cards",
+    "url": "html/vertical-menu-template/cards-actions.html",
+    "size": 142155
+  },
+  {
+    "filename": "cards-advance.html",
+    "title": "Cards Advance",
+    "category": "Cards",
+    "url": "html/vertical-menu-template/cards-advance.html",
+    "size": 356482
+  },
+  {
+    "filename": "cards-analytics.html",
+    "title": "Cards Analytics",
+    "category": "Cards",
+    "url": "html/vertical-menu-template/cards-analytics.html",
+    "size": 455384
+  },
+  {
+    "filename": "cards-basic.html",
+    "title": "Cards Basic",
+    "category": "Cards",
+    "url": "html/vertical-menu-template/cards-basic.html",
+    "size": 156139
+  },
+  {
+    "filename": "cards-statistics.html",
+    "title": "Cards Statistics",
+    "category": "Cards",
+    "url": "html/vertical-menu-template/cards-statistics.html",
+    "size": 352862
+  },
+  {
+    "filename": "charts-apex.html",
+    "title": "Charts Apex",
+    "category": "Charts",
+    "url": "html/vertical-menu-template/charts-apex.html",
+    "size": 488601
+  },
+  {
+    "filename": "charts-chartjs.html",
+    "title": "Charts Chartjs",
+    "category": "Charts",
+    "url": "html/vertical-menu-template/charts-chartjs.html",
+    "size": 139676
+  },
+  {
+    "filename": "dashboards-crm.html",
+    "title": "Dashboards Crm",
+    "category": "Dashboards",
+    "url": "html/vertical-menu-template/dashboards-crm.html",
+    "size": 291863
+  },
+  {
+    "filename": "extended-ui-avatar.html",
+    "title": "Extended Ui Avatar",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-avatar.html",
+    "size": 136784
+  },
+  {
+    "filename": "extended-ui-blockui.html",
+    "title": "Extended Ui Blockui",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-blockui.html",
+    "size": 134099
+  },
+  {
+    "filename": "extended-ui-drag-and-drop.html",
+    "title": "Extended Ui Drag And Drop",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-drag-and-drop.html",
+    "size": 143572
+  },
+  {
+    "filename": "extended-ui-media-player.html",
+    "title": "Extended Ui Media Player",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-media-player.html",
+    "size": 143319
+  },
+  {
+    "filename": "extended-ui-misc.html",
+    "title": "Extended Ui Misc",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-misc.html",
+    "size": 133069
+  },
+  {
+    "filename": "extended-ui-perfect-scrollbar.html",
+    "title": "Extended Ui Perfect Scrollbar",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-perfect-scrollbar.html",
+    "size": 132640
+  },
+  {
+    "filename": "extended-ui-star-ratings.html",
+    "title": "Extended Ui Star Ratings",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-star-ratings.html",
+    "size": 151717
+  },
+  {
+    "filename": "extended-ui-sweetalert2.html",
+    "title": "Extended Ui Sweetalert2",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-sweetalert2.html",
+    "size": 131914
+  },
+  {
+    "filename": "extended-ui-text-divider.html",
+    "title": "Extended Ui Text Divider",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-text-divider.html",
+    "size": 133026
+  },
+  {
+    "filename": "extended-ui-timeline-basic.html",
+    "title": "Extended Ui Timeline Basic",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-timeline-basic.html",
+    "size": 135056
+  },
+  {
+    "filename": "extended-ui-timeline-fullscreen.html",
+    "title": "Extended Ui Timeline Fullscreen",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-timeline-fullscreen.html",
+    "size": 147174
+  },
+  {
+    "filename": "extended-ui-tour.html",
+    "title": "Extended Ui Tour",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-tour.html",
+    "size": 126583
+  },
+  {
+    "filename": "extended-ui-treeview.html",
+    "title": "Extended Ui Treeview",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/extended-ui-treeview.html",
+    "size": 157860
+  },
+  {
+    "filename": "form-layouts-horizontal.html",
+    "title": "Form Layouts Horizontal",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/form-layouts-horizontal.html",
+    "size": 198124
+  },
+  {
+    "filename": "form-layouts-sticky.html",
+    "title": "Form Layouts Sticky",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/form-layouts-sticky.html",
+    "size": 143068
+  },
+  {
+    "filename": "form-layouts-vertical.html",
+    "title": "Form Layouts Vertical",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/form-layouts-vertical.html",
+    "size": 178606
+  },
+  {
+    "filename": "form-validation.html",
+    "title": "Form Validation",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/form-validation.html",
+    "size": 168543
+  },
+  {
+    "filename": "form-wizard-icons.html",
+    "title": "Form Wizard Icons",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/form-wizard-icons.html",
+    "size": 179065
+  },
+  {
+    "filename": "form-wizard-numbered.html",
+    "title": "Form Wizard Numbered",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/form-wizard-numbered.html",
+    "size": 182425
+  },
+  {
+    "filename": "forms-basic-inputs.html",
+    "title": "Forms Basic Inputs",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-basic-inputs.html",
+    "size": 151880
+  },
+  {
+    "filename": "forms-custom-options.html",
+    "title": "Forms Custom Options",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-custom-options.html",
+    "size": 159440
+  },
+  {
+    "filename": "forms-editors.html",
+    "title": "Forms Editors",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-editors.html",
+    "size": 203881
+  },
+  {
+    "filename": "forms-extras.html",
+    "title": "Forms Extras",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-extras.html",
+    "size": 133967
+  },
+  {
+    "filename": "forms-file-upload.html",
+    "title": "Forms File Upload",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-file-upload.html",
+    "size": 127827
+  },
+  {
+    "filename": "forms-input-groups.html",
+    "title": "Forms Input Groups",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-input-groups.html",
+    "size": 146329
+  },
+  {
+    "filename": "forms-pickers.html",
+    "title": "Forms Pickers",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-pickers.html",
+    "size": 190893
+  },
+  {
+    "filename": "forms-selects.html",
+    "title": "Forms Selects",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-selects.html",
+    "size": 184731
+  },
+  {
+    "filename": "forms-sliders.html",
+    "title": "Forms Sliders",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-sliders.html",
+    "size": 171254
+  },
+  {
+    "filename": "forms-switches.html",
+    "title": "Forms Switches",
+    "category": "Forms",
+    "url": "html/vertical-menu-template/forms-switches.html",
+    "size": 141689
+  },
+  {
+    "filename": "icons-font-awesome.html",
+    "title": "Icons Font Awesome",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/icons-font-awesome.html",
+    "size": 132833
+  },
+  {
+    "filename": "icons-tabler.html",
+    "title": "Icons Tabler",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/icons-tabler.html",
+    "size": 133052
+  },
+  {
+    "filename": "index.html",
+    "title": "Index",
+    "category": "Dashboards",
+    "url": "html/vertical-menu-template/index.html",
+    "size": 270302
+  },
+  {
+    "filename": "layouts-blank.html",
+    "title": "Layouts Blank",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-blank.html",
+    "size": 52603
+  },
+  {
+    "filename": "layouts-collapsed-menu.html",
+    "title": "Layouts Collapsed Menu",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-collapsed-menu.html",
+    "size": 126755
+  },
+  {
+    "filename": "layouts-container.html",
+    "title": "Layouts Container",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-container.html",
+    "size": 126605
+  },
+  {
+    "filename": "layouts-content-navbar-with-sidebar.html",
+    "title": "Layouts Content Navbar With Sidebar",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-content-navbar-with-sidebar.html",
+    "size": 126986
+  },
+  {
+    "filename": "layouts-content-navbar.html",
+    "title": "Layouts Content Navbar",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-content-navbar.html",
+    "size": 126590
+  },
+  {
+    "filename": "layouts-fluid.html",
+    "title": "Layouts Fluid",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-fluid.html",
+    "size": 126581
+  },
+  {
+    "filename": "layouts-without-menu.html",
+    "title": "Layouts Without Menu",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-without-menu.html",
+    "size": 80277
+  },
+  {
+    "filename": "layouts-without-navbar.html",
+    "title": "Layouts Without Navbar",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/layouts-without-navbar.html",
+    "size": 101235
+  },
+  {
+    "filename": "maps-leaflet.html",
+    "title": "Maps Leaflet",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/maps-leaflet.html",
+    "size": 204414
+  },
+  {
+    "filename": "modal-examples.html",
+    "title": "Modal Examples",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/modal-examples.html",
+    "size": 226338
+  },
+  {
+    "filename": "pages-account-settings-account.html",
+    "title": "Pages Account Settings Account",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-account-settings-account.html",
+    "size": 141369
+  },
+  {
+    "filename": "pages-account-settings-billing.html",
+    "title": "Pages Account Settings Billing",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-account-settings-billing.html",
+    "size": 190517
+  },
+  {
+    "filename": "pages-account-settings-connections.html",
+    "title": "Pages Account Settings Connections",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-account-settings-connections.html",
+    "size": 135977
+  },
+  {
+    "filename": "pages-account-settings-notifications.html",
+    "title": "Pages Account Settings Notifications",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-account-settings-notifications.html",
+    "size": 132851
+  },
+  {
+    "filename": "pages-account-settings-security.html",
+    "title": "Pages Account Settings Security",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-account-settings-security.html",
+    "size": 142435
+  },
+  {
+    "filename": "pages-faq.html",
+    "title": "Pages Faq",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-faq.html",
+    "size": 146768
+  },
+  {
+    "filename": "pages-misc-comingsoon.html",
+    "title": "Pages Misc Comingsoon",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-misc-comingsoon.html",
+    "size": 53833
+  },
+  {
+    "filename": "pages-misc-error.html",
+    "title": "Pages Misc Error",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-misc-error.html",
+    "size": 53588
+  },
+  {
+    "filename": "pages-misc-not-authorized.html",
+    "title": "Pages Misc Not Authorized",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-misc-not-authorized.html",
+    "size": 53655
+  },
+  {
+    "filename": "pages-misc-under-maintenance.html",
+    "title": "Pages Misc Under Maintenance",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-misc-under-maintenance.html",
+    "size": 53635
+  },
+  {
+    "filename": "pages-pricing.html",
+    "title": "Pages Pricing",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-pricing.html",
+    "size": 132763
+  },
+  {
+    "filename": "pages-profile-connections.html",
+    "title": "Pages Profile Connections",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-profile-connections.html",
+    "size": 143532
+  },
+  {
+    "filename": "pages-profile-projects.html",
+    "title": "Pages Profile Projects",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-profile-projects.html",
+    "size": 157794
+  },
+  {
+    "filename": "pages-profile-teams.html",
+    "title": "Pages Profile Teams",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-profile-teams.html",
+    "size": 162493
+  },
+  {
+    "filename": "pages-profile-user.html",
+    "title": "Pages Profile User",
+    "category": "Pages",
+    "url": "html/vertical-menu-template/pages-profile-user.html",
+    "size": 174288
+  },
+  {
+    "filename": "tables-basic.html",
+    "title": "Tables Basic",
+    "category": "Tables",
+    "url": "html/vertical-menu-template/tables-basic.html",
+    "size": 264600
+  },
+  {
+    "filename": "tables-datatables-advanced.html",
+    "title": "Tables Datatables Advanced",
+    "category": "Tables",
+    "url": "html/vertical-menu-template/tables-datatables-advanced.html",
+    "size": 187781
+  },
+  {
+    "filename": "tables-datatables-basic.html",
+    "title": "Tables Datatables Basic",
+    "category": "Tables",
+    "url": "html/vertical-menu-template/tables-datatables-basic.html",
+    "size": 202867
+  },
+  {
+    "filename": "tables-datatables-extensions.html",
+    "title": "Tables Datatables Extensions",
+    "category": "Tables",
+    "url": "html/vertical-menu-template/tables-datatables-extensions.html",
+    "size": 290141
+  },
+  {
+    "filename": "ui-accordion.html",
+    "title": "Ui Accordion",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-accordion.html",
+    "size": 141793
+  },
+  {
+    "filename": "ui-alerts.html",
+    "title": "Ui Alerts",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-alerts.html",
+    "size": 137050
+  },
+  {
+    "filename": "ui-badges.html",
+    "title": "Ui Badges",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-badges.html",
+    "size": 151275
+  },
+  {
+    "filename": "ui-buttons.html",
+    "title": "Ui Buttons",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-buttons.html",
+    "size": 155596
+  },
+  {
+    "filename": "ui-carousel.html",
+    "title": "Ui Carousel",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-carousel.html",
+    "size": 154570
+  },
+  {
+    "filename": "ui-collapse.html",
+    "title": "Ui Collapse",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-collapse.html",
+    "size": 131659
+  },
+  {
+    "filename": "ui-dropdowns.html",
+    "title": "Ui Dropdowns",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-dropdowns.html",
+    "size": 172414
+  },
+  {
+    "filename": "ui-footer.html",
+    "title": "Ui Footer",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-footer.html",
+    "size": 141106
+  },
+  {
+    "filename": "ui-list-groups.html",
+    "title": "Ui List Groups",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-list-groups.html",
+    "size": 157540
+  },
+  {
+    "filename": "ui-modals.html",
+    "title": "Ui Modals",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-modals.html",
+    "size": 190836
+  },
+  {
+    "filename": "ui-navbar.html",
+    "title": "Ui Navbar",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-navbar.html",
+    "size": 157815
+  },
+  {
+    "filename": "ui-offcanvas.html",
+    "title": "Ui Offcanvas",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-offcanvas.html",
+    "size": 140965
+  },
+  {
+    "filename": "ui-pagination-breadcrumbs.html",
+    "title": "Ui Pagination Breadcrumbs",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-pagination-breadcrumbs.html",
+    "size": 168470
+  },
+  {
+    "filename": "ui-progress.html",
+    "title": "Ui Progress",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-progress.html",
+    "size": 135881
+  },
+  {
+    "filename": "ui-spinners.html",
+    "title": "Ui Spinners",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-spinners.html",
+    "size": 137025
+  },
+  {
+    "filename": "ui-tabs-pills.html",
+    "title": "Ui Tabs Pills",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-tabs-pills.html",
+    "size": 148360
+  },
+  {
+    "filename": "ui-toasts.html",
+    "title": "Ui Toasts",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-toasts.html",
+    "size": 148970
+  },
+  {
+    "filename": "ui-tooltips-popovers.html",
+    "title": "Ui Tooltips Popovers",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-tooltips-popovers.html",
+    "size": 135940
+  },
+  {
+    "filename": "ui-typography.html",
+    "title": "Ui Typography",
+    "category": "UI Components",
+    "url": "html/vertical-menu-template/ui-typography.html",
+    "size": 139854
+  },
+  {
+    "filename": "wizard-ex-checkout.html",
+    "title": "Wizard Ex Checkout",
+    "category": "Wizards",
+    "url": "html/vertical-menu-template/wizard-ex-checkout.html",
+    "size": 172982
+  },
+  {
+    "filename": "wizard-ex-create-deal.html",
+    "title": "Wizard Ex Create Deal",
+    "category": "Wizards",
+    "url": "html/vertical-menu-template/wizard-ex-create-deal.html",
+    "size": 164114
+  },
+  {
+    "filename": "wizard-ex-property-listing.html",
+    "title": "Wizard Ex Property Listing",
+    "category": "Wizards",
+    "url": "html/vertical-menu-template/wizard-ex-property-listing.html",
+    "size": 175940
+  }
+]
