@@ -1,7 +1,7 @@
 # Vuexy Admin Template (Free Offline Mirror)
 
-[![Scraped with WebHarvest](https://img.shields.io/badge/scraped%20with-WebHarvest-28c76f?style=flat-square)](https://webharvest.onrender.com/)
-[![145+ Pages](https://img.shields.io/badge/pages-145%2B%20HTML-7367f0?style=flat-square)](./index.html)
+[![Scraped with WebHarvest](https://img.shields.io/badge/scraped_with-WebHarvest-28c76f?style=flat-square)](https://webharvest.onrender.com/)
+[![145+ Pages](https://img.shields.io/badge/pages-145+_HTML-7367f0?style=flat-square)](./index.html)
 
 A free, offline-ready mirror of the **Vuexy Admin Dashboard Template**, scraped using **[WebHarvest](https://webharvest.onrender.com/)**.
 
